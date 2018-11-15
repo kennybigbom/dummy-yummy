@@ -58,8 +58,13 @@ function renderFormEdit (is) {
 }
 
 $(document).ready(function () {
+  var env = window.localStorage.getItem('env')
+  if (env) {
+    $('#selectENV').val(env).change()
+  }
   handleLogin()
   getCampaigns()
+
   $(this).on('click', '#createBtnSubmit', function () {
     try {
       var campaignName = $('#campaignName').val()

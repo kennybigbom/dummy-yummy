@@ -5,23 +5,12 @@ var endpoints = {
   uat: 'https://uat-api.bigbom.net'
 }
 
-var environment = ''
-var currentUrl = window.location.href
-if (currentUrl.indexOf('uat-api.bigbom.net') !== -1) {
-  environment = 'uat'
-} else if (currentUrl.indexOf('dev-api.bigbom.net') !== -1) {
-  environment = 'dev'
-} else {
-  environment = 'local'
-}
-
-var Config = {
-  endpoint: endpoints[environment]
-}
-
-var refreshTokenFlag
-
 function callAPI (uri, data, method, callback) {
+  var env = $('#selectENV option:selected').val()
+  window.localStorage.setItem('env', env)
+  var Config = {
+    endpoint: endpoints[env]
+  }
   if (!method) {
     method = 'GET'
   }
@@ -117,7 +106,7 @@ function createCampaign (doc) {
       } else {
         alert('Success !!!')
         $('input[type=text]').val('')
-        $('input[type=checkbox]').prop('checked', false);
+        $('input[type=checkbox]').prop('checked', false)
         var layerCreateCampaign = $('#form-createCampaign')
         layerCreateCampaign.hide()
         getCampaigns()
@@ -133,7 +122,7 @@ function editCampaign (id, doc) {
       } else {
         alert('Success !!!')
         $('input[type=text]').val('')
-        $('input[type=checkbox]').prop('checked', false);
+        $('input[type=checkbox]').prop('checked', false)
         var parent = $(this).closest('[data-id]')
         parent.hide()
         getCampaigns()
@@ -156,7 +145,7 @@ function getCampaigns () {
   callAPI('/iads/dummys?status=ACTIVE&isDummy=', null,
     'GET', function (err, res) {
       if (err) {
-        getCampaigns()
+        return err
       }
       render('#campaignList', res, '#campaignList1')
     })
