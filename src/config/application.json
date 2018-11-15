@@ -1,0 +1,36 @@
+{
+  "name": "BB.iAds.Campaign",
+  "port": 3300,
+  "authentication": {
+    "key": "?a=e6=N8H*Zftpp-%JM8vPCza!nBS9byGwc!sQjSsH4&!xghfm?8+Y_t_D+CAY$4.10052018",
+    "expiresIn": 1800
+  },
+  "logger": {
+    "environments": [
+      "uat",
+      "production"
+    ],
+    "Loggly": {
+      "token": "c5e6ef20-5e2d-4bc0-b1b7-b6b2340da469",
+      "subdomain": "bigbom",
+      "json": true
+    },
+    "Raven": {
+      "dsn": "https://74de543ef125468e855143b74533ae30@sentry.io/1204341"
+    }
+  },
+  "rpc": {
+    "name": "FbCampaign",
+    "host": "0.0.0.0",
+    "port": 50051,
+    "protoPath": "./bigbom-proto/iads-fb-campaign.proto",
+    "clients": {
+      "iAdsAdSet": {
+        "host": "0.0.0.0",
+        "port": 50051,
+        "protoPath": "./bigbom-proto/iads-fb-adset.proto",
+        "service": "FbAdSet"
+      }
+    }
+  }
+}
