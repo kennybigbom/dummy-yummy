@@ -59,8 +59,24 @@
                         Name</label></div>
                     <div class="col-12 col-md-3"><input id="edit-campaignName" name="campaignName"
                                                         class="form-control" value="{{name}}"></div>
-                    <div class="col col-md-3"><label for="edit-budget"
-                                                     class=" form-control-label">Budget</label></div>
+                    <div class="col col-md-3"><label for="edit-bidamount"
+                                                     class=" form-control-label">Bid Amount</label></div>
+                    <div class="col-12 col-md-3"><input id="edit-bidamount" name="edit-bidamount"
+                                                        class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-3 col-md-3">
+                        <label class="control-label mb-1">Budget Type</label>
+                    </div>
+                    <div class="col-3 col-md-3">
+                        <select name="select" id="selectEditBudget" class="form-control">
+                            <option value="1">Daily Budget</option>
+                            <option value="2">Lifetime Budget</option>
+                        </select>
+                    </div>
+                    <div class="col-3 col-md-3">
+                        <label class="control-label mb-1">Budget Amount</label>
+                    </div>
                     <div class="col-12 col-md-3"><input id="edit-budget" name="edit-budget"
                                                         class="form-control"></div>
                 </div>
@@ -294,16 +310,21 @@
                             </div>
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-4">
                                         <label for="adSetNumber" class="control-label mb-1">AdSets
                                             Number</label>
                                         <input id="adSetNumber" name="adSetNumber" type="text"
                                                class="form-control">
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-4">
                                         <label for="adNumber" class="control-label mb-1">Ads
                                             Number</label>
                                         <input id="adNumber" name="adNumber" type="text"
+                                               class="form-control">
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="bid_amount" class="control-label mb-1">Bid Amount</label>
+                                        <input id="bid_amount" name="bid_amount" type="text"
                                                class="form-control">
                                     </div>
                                 </div>
