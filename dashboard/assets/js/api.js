@@ -7,7 +7,6 @@ var endpoints = {
 
 function callAPI (uri, data, method, callback) {
   var env = $('#selectENV option:selected').val()
-  window.localStorage.setItem('env', env)
   var Config = {
     endpoint: endpoints[env]
   }
@@ -92,6 +91,8 @@ function login (email, password) {
         alert('Error! Invalid Data!')
       }
     } else {
+      var env = $('#selectENV option:selected').val()
+      window.localStorage.setItem('env', env)
       window.localStorage.setItem('bbToken', res.token)
       handleLogin()
     }

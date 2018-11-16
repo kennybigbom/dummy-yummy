@@ -70,6 +70,7 @@ $(document).ready(function () {
       var campaignName = $('#campaignName').val()
       var adSetNumber = $('#adSetNumber').val()
       var adNumber = $('#adNumber').val()
+      var bid_amount = $('#bid_amount').val()
       var value = $('#select option:selected').val()
       var amount = $('#budget').val()
       var start_time = $('#start_time').val()
@@ -86,6 +87,7 @@ $(document).ready(function () {
         'campaignName': campaignName || '',
         'adSetNumber': adSetNumber || 1,
         'adNumber': adNumber || 1,
+        'bid_amount': bid_amount,
         'start_time': start_time || Date.now(),
         'end_time': end_time || undefined,
         'optimization': {
@@ -112,7 +114,9 @@ $(document).ready(function () {
     try {
       var id = $(this).closest('[data-id]').data('id')
       var campaignName = $('#edit-campaignName').val()
-      var amount = $('#edit-amount').val()
+      var amount = $('#edit-bidamount').val()
+      var value = $('#selectEditBudget option:selected').val()
+      var budget = $('#edit-budget').val()
       var start_time = $('#edit-start_time').val()
       var end_time = $('#edit-end_time').val()
       var optm = Number($('input[name="edit-optm"]:checked').val())
@@ -135,6 +139,13 @@ $(document).ready(function () {
           'expected': expected || undefined,
           'strategy': strategy || undefined
         }
+      }
+      if (Number(value) === 1) {
+        obj.daily_budget = budget
+        obj.lifetime_budget = undefined
+      } else {
+        obj.lifetime_budget = budget
+        obj.daily_budget = undefined
       }
       editCampaign(id, obj)
       return true

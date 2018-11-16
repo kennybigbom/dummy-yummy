@@ -10,12 +10,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ela Admin - HTML5 Admin Template</title>
-    <meta name="description" content="Ela Admin - HTML5 Admin Template">
+    <title>Bigbom - Dummy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
-    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="apple-touch-icon" href="./images/favicon.png">
+    <link rel="shortcut icon" href="./images/favicon.png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
@@ -59,8 +58,24 @@
                         Name</label></div>
                     <div class="col-12 col-md-3"><input id="edit-campaignName" name="campaignName"
                                                         class="form-control" value="{{name}}"></div>
-                    <div class="col col-md-3"><label for="edit-budget"
-                                                     class=" form-control-label">Budget</label></div>
+                    <div class="col col-md-3"><label for="edit-bidamount"
+                                                     class=" form-control-label">Bid Amount</label></div>
+                    <div class="col-12 col-md-3"><input id="edit-bidamount" name="edit-bidamount"
+                                                        class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-3 col-md-3">
+                        <label class="control-label mb-1">Budget Type</label>
+                    </div>
+                    <div class="col-3 col-md-3">
+                        <select name="select" id="selectEditBudget" class="form-control">
+                            <option value="1">Daily Budget</option>
+                            <option value="2">Lifetime Budget</option>
+                        </select>
+                    </div>
+                    <div class="col-3 col-md-3">
+                        <label class="control-label mb-1">Budget Amount</label>
+                    </div>
                     <div class="col-12 col-md-3"><input id="edit-budget" name="edit-budget"
                                                         class="form-control"></div>
                 </div>
@@ -294,16 +309,21 @@
                             </div>
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-4">
                                         <label for="adSetNumber" class="control-label mb-1">AdSets
                                             Number</label>
                                         <input id="adSetNumber" name="adSetNumber" type="text"
                                                class="form-control">
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-4">
                                         <label for="adNumber" class="control-label mb-1">Ads
                                             Number</label>
                                         <input id="adNumber" name="adNumber" type="text"
+                                               class="form-control">
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="bid_amount" class="control-label mb-1">Bid Amount</label>
+                                        <input id="bid_amount" name="bid_amount" type="text"
                                                class="form-control">
                                     </div>
                                 </div>
