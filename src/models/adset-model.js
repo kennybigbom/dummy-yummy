@@ -1,7 +1,4 @@
 'user strict'
-const {
-  AbTestModeEnums, BidStrategy
-} = require('../constants/common')
 
 module.exports = global.DB.model('adSet', global.DB.Schema({
   userId: {
@@ -22,8 +19,7 @@ module.exports = global.DB.model('adSet', global.DB.Schema({
   attribution_spec: Object,
   bid_amount: Number,
   bid_strategy: {
-    type: String,
-    enum: BidStrategy
+    type: String
   },
   effective_status: String,
   billing_event: String,
@@ -82,7 +78,6 @@ module.exports = global.DB.model('adSet', global.DB.Schema({
   },
   early_winner_declaration_enabled: Boolean,
   abTestMode: {
-    type: String,
-    enum: AbTestModeEnums
+    type: String
   }
 }))
