@@ -1,0 +1,24 @@
+{
+  "name": "dummy",
+  "version": "1.0.0",
+  "description": "A utility to generate dummy data for ads campaign for testing purpose",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigbomio/dummy-yummy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bigbomio/dummy-yummy/issues"
+  },
+  "homepage": "https://github.com/bigbomio/dummy-yummy#readme",
+  "dependencies": {
+    "@kennynguyen/bigbom-core": "^1.3.4",
+    "nodemon": "^1.18.6"
+  }
+}

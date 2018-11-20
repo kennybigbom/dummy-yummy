@@ -1,5 +1,4 @@
 'use strict'
-const {AdTypeEnums} = require('../constants/enum')
 
 module.exports = global.DB.model('ad', global.DB.Schema({
   userId: {
@@ -19,8 +18,7 @@ module.exports = global.DB.model('ad', global.DB.Schema({
   adlabels: Object,
   bid_amount: Number,
   adType: {
-    type: String,
-    enum: AdTypeEnums
+    type: String
   },
   creative: Object,
   creative_id: String,

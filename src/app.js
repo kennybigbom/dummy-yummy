@@ -11,7 +11,7 @@ module.exports = (env, cb) => {
     cb = () => {}
   }
   const option = {
-    component: ['db', 'cache', 'queue', 'rpc-server', 'rpc-client'],
+    component: ['db'],
     useRoute: true,
     env: env,
     __: __dirname,

@@ -1,7 +1,4 @@
 'use strict'
-const {
-  TestingLevel, OptimizationMode, Strategy
-} = require('../constants/common')
 module.exports = global.DB.model('campaign', global.DB.Schema({
   userId: {
     type: String,
@@ -60,14 +57,8 @@ module.exports = global.DB.model('campaign', global.DB.Schema({
   },
   optimization: {
     startedAt: Date,
-    mode: {
-      type: Number,
-      enum: OptimizationMode
-    },
-    level: {
-      type: Number,
-      enum: TestingLevel
-    },
+    mode: Number,
+    level: Number,
     limit: Number,
     expected: Number,
     strategy: [Number]
