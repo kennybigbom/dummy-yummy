@@ -1,0 +1,89 @@
+## docker build -t asia.gcr.io/operating-ethos-206302/bb-ads-dummy:latest --build-arg ENV=dev .
+
+image: 'docker:latest'
+services:
+  - 'docker:dind'
+variables:
+  DOCKER_HOST: 'tcp://localhost:2375'
+  DOCKER_DRIVER: overlay
+  GIT_SUBMODULE_STRATEGY: recursive
+  GCP_PROJECT_NAME: operating-ethos-206302
+  GCP_ZONE: asia-northeast1-a
+  GCR_HOST: asia.gcr.io
+  GCR_PATH: '${GCR_HOST}/${GCP_PROJECT_NAME}'
+  GOOGLE_KEY_FILE: google-key.json
+  GOOGLE_STORAGE_FILE: google-storage.json
+  PROJECT_NAME_API: bb-ads-dummy
+stages:
+  - test
+  - deploy
+test:
+  stage: test
+  script: 'docker run --rm -v ${PWD}:/home -w /home node:10.13.0 sh -c "npm i && npm test"'
+  only:
+    - '/^v([0-9.]+)(-RC[\d+])?$/'
+    - master
+before_script:
+  - 'echo ${GOOGLE_KEY} > ${GOOGLE_KEY_FILE}'
+  - 'echo ${GOOGLE_STORAGE} > ${GOOGLE_STORAGE_FILE}'
+  - 'docker login -u _json_key --password-stdin ${GCR_HOST} < ${GOOGLE_KEY_FILE}'
+deploy-api-dev:
+  image: 'google/cloud-sdk:206.0.0'
+  stage: deploy
+  script:
+    - 'PROJECT_NAME=${PROJECT_NAME_API}'
+    - 'CONTAINER_IMAGE=${GCR_PATH}/${PROJECT_NAME}'
+    - 'NAMESPACE=${CI_ENVIRONMENT_NAME}'
+    - 'if [ -n "$CI_COMMIT_TAG" ]; then IMAGE_TAG="${CONTAINER_IMAGE}:${CI_COMMIT_TAG}"; else IMAGE_TAG="${CONTAINER_IMAGE}:${CI_COMMIT_REF_NAME}-${CI_JOB_ID}"; fi'
+    - 'docker build -t "${IMAGE_TAG}" --build-arg ENV=${NAMESPACE} --build-arg APP=api .'
+    - 'docker push "${IMAGE_TAG}"'
+    - 'gcloud auth activate-service-account --key-file ${GOOGLE_STORAGE_FILE}'
+    - 'gcloud config set project ${GCP_PROJECT_NAME}'
+    - 'gcloud config set compute/zone ${GCP_ZONE}'
+    - gcloud config set container/use_client_certificate True
+    - 'kubectl set image deployment/${PROJECT_NAME} ${PROJECT_NAME}="${IMAGE_TAG}" -n ${NAMESPACE}'
+    - 'kubectl rollout status deployment/${PROJECT_NAME} -n ${NAMESPACE}'
+  environment:
+    name: dev
+  only:
+    - master
+deploy-api-uat:
+  image: 'google/cloud-sdk:206.0.0'
+  stage: deploy
+  script:
+    - 'PROJECT_NAME=${PROJECT_NAME_API}'
+    - 'CONTAINER_IMAGE=${GCR_PATH}/${PROJECT_NAME}'
+    - 'NAMESPACE=${CI_ENVIRONMENT_NAME}'
+    - 'if [ -n "$CI_COMMIT_TAG" ]; then IMAGE_TAG="${CONTAINER_IMAGE}:${CI_COMMIT_TAG}"; else IMAGE_TAG="${CONTAINER_IMAGE}:${CI_COMMIT_REF_NAME}-${CI_JOB_ID}"; fi'
+    - 'docker build -t "${IMAGE_TAG}" --build-arg ENV=${NAMESPACE} --build-arg APP=api .'
+    - 'docker push "${IMAGE_TAG}"'
+    - 'gcloud auth activate-service-account --key-file ${GOOGLE_STORAGE_FILE}'
+    - 'gcloud config set project ${GCP_PROJECT_NAME}'
+    - 'gcloud config set compute/zone ${GCP_ZONE}'
+    - gcloud config set container/use_client_certificate True
+    - 'kubectl set image deployment/${PROJECT_NAME} ${PROJECT_NAME}="${IMAGE_TAG}" -n ${NAMESPACE}'
+    - 'kubectl rollout status deployment/${PROJECT_NAME} -n ${NAMESPACE}'
+  environment:
+    name: uat
+  only:
+    - '/^v([0-9.]+)-RC[\d+]$/'
+deploy-api-production:
+  image: 'google/cloud-sdk:206.0.0'
+  stage: deploy
+  script:
+    - 'PROJECT_NAME=${PROJECT_NAME_API}'
+    - 'CONTAINER_IMAGE=${GCR_PATH}/${PROJECT_NAME}'
+    - 'NAMESPACE=${CI_ENVIRONMENT_NAME}'
+    - 'if [ -n "$CI_COMMIT_TAG" ]; then IMAGE_TAG="${CONTAINER_IMAGE}:${CI_COMMIT_TAG}"; else IMAGE_TAG="${CONTAINER_IMAGE}:${CI_COMMIT_REF_NAME}-${CI_JOB_ID}"; fi'
+    - 'docker build -t "${IMAGE_TAG}" --build-arg ENV=${NAMESPACE} --build-arg APP=api .'
+    - 'docker push "${IMAGE_TAG}"'
+    - 'gcloud auth activate-service-account --key-file ${GOOGLE_STORAGE_FILE}'
+    - 'gcloud config set project ${GCP_PROJECT_NAME}'
+    - 'gcloud config set compute/zone ${GCP_ZONE}'
+    - gcloud config set container/use_client_certificate True
+    - 'kubectl set image deployment/${PROJECT_NAME} ${PROJECT_NAME}="${IMAGE_TAG}" -n ${NAMESPACE}'
+    - 'kubectl rollout status deployment/${PROJECT_NAME} -n ${NAMESPACE}'
+  environment:
+    name: production
+  only:
+    - '/^v([0-9.]+)$/'

@@ -1,0 +1,32 @@
+{
+  "apps": [
+    {
+      "name": "api",
+      "script": "src/index.js",
+      "autorestart": true,
+      "watch": false,
+      "instances": "max",
+      "exec_mode": "cluster",
+      "env": {
+        "NODE_ENV": "local"
+      },
+      "env_dev": {
+        "NODE_ENV": "dev"
+      },
+      "env_uat": {
+        "NODE_ENV": "uat"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    },
+    {
+      "name": "app",
+      "script": "serve",
+      "env": {
+        "PM2_SERVE_PATH": "./dashboard",
+        "PM2_SERVE_PORT": 8080
+      }
+    }
+  ]
+}

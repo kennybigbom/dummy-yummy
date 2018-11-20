@@ -4,7 +4,8 @@
   "description": "A utility to generate dummy data for ads campaign for testing purpose",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index",
+    "api": "nodemon src/index",
+    "app": "lite-server --baseDir=./dashboard",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +19,6 @@
   },
   "homepage": "https://github.com/bigbomio/dummy-yummy#readme",
   "dependencies": {
-    "@kennynguyen/bigbom-core": "^1.3.4",
-    "nodemon": "^1.18.6"
+    "@kennynguyen/bigbom-core": "^1.3.4"
   }
 }
