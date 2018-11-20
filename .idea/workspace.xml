@@ -2,51 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81ea4871-cbc2-43f2-8b33-d12fb64fa608" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dashboard/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/cs-skin-elastic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/lib/chosen/chosen-sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/lib/chosen/chosen-sprite@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/lib/chosen/chosen.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/lib/chosen/chosen.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/lib/datatable/buttons.bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/lib/datatable/buttons.dataTables.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/lib/datatable/dataTables.bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/lib/vector-map/jqvmap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/css/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/fonts/icomoon/icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/fonts/icomoon/icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/fonts/icomoon/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/fonts/icomoon/icomoon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/fonts/icomoon/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/js/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/scss/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/scss/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/assets/scss/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/bs-config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/images/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/images/admin.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/images/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/images/favicon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard/page-login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/application.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/application.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/env.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.dev.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/env.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.local.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/env.uat.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.uat.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/env.unitTest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/env.unitTest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/index-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/index-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/ad-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ad-model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/adset-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/adset-model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/campaign-model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/campaign-model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index-route.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index-route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/ad-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/ad-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/adset-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/adset-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/campaign-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/campaign-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/index-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/index-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -73,7 +29,7 @@
           <entry key="gitignore" value="3" />
           <entry key="html" value="30" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="76" />
+          <entry key="js" value="77" />
           <entry key="json" value="23" />
           <entry key="map" value="3" />
           <entry key="md" value="2" />
@@ -92,7 +48,7 @@
           <entry key="HTML" value="30" />
           <entry key="Image" value="10" />
           <entry key="JSON" value="23" />
-          <entry key="JavaScript" value="76" />
+          <entry key="JavaScript" value="77" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="SCSS" value="7" />
           <entry key="SVG" value="2" />
@@ -132,13 +88,9 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -146,11 +98,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dashboard/assets/js/api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="151" column="6" lean-forward="true" selection-start-line="151" selection-start-column="6" selection-end-line="151" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -174,7 +135,7 @@
         <entry file="file://$PROJECT_DIR$/src/config/env.unitTest.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -279,6 +240,7 @@
         <option value="$PROJECT_DIR$/dashboard/package.json" />
         <option value="$PROJECT_DIR$/dashboard/jsconfig.json" />
         <option value="$PROJECT_DIR$/dashboard/src/App.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -349,19 +311,19 @@
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/dashboard/src/styles/lib/styleguidist" />
-      <recent name="$PROJECT_DIR$/dashboard/src" />
-      <recent name="$PROJECT_DIR$/dashboard" />
-      <recent name="$PROJECT_DIR$/dashboard/images" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/dashboard/src/images" />
       <recent name="$PROJECT_DIR$/dashboard/src/styles/home" />
       <recent name="$PROJECT_DIR$/dashboard/src" />
       <recent name="$PROJECT_DIR$/dashboard" />
       <recent name="$PROJECT_DIR$/dashboard/template" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/dashboard/src/styles/lib/styleguidist" />
+      <recent name="$PROJECT_DIR$/dashboard/src" />
+      <recent name="$PROJECT_DIR$/dashboard" />
+      <recent name="$PROJECT_DIR$/dashboard/images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -449,12 +411,12 @@
       <updated>1542090287570</updated>
       <workItem from="1542090289177" duration="67763000" />
       <workItem from="1542335260943" duration="6640000" />
-      <workItem from="1542697555777" duration="848000" />
+      <workItem from="1542697555777" duration="1056000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75251000" />
+    <option name="totallyTimeSpent" value="75459000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -517,7 +479,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dashboard/page-login.html" />
-    <entry file="file://$PROJECT_DIR$/dashboard/assets/js/api.js" />
     <entry file="file://$PROJECT_DIR$/dashboard/assets/js/login.js" />
     <entry file="file://$PROJECT_DIR$/src/services/campaign-service.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -668,13 +629,6 @@
     <entry file="file://$PROJECT_DIR$/dashboard/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/config/env.dev.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -687,7 +641,7 @@
     <entry file="file://$PROJECT_DIR$/src/config/env.unitTest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -697,9 +651,19 @@
     <entry file="file://$PROJECT_DIR$/src/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/assets/js/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="151" column="6" lean-forward="true" selection-start-line="151" selection-start-column="6" selection-end-line="151" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
